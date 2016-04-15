@@ -50,15 +50,15 @@
       
       <script>
       
-         console.log( "%c\nStuffBySpencer - GAME TEMPLATE", "font-weight: bold; color: #fff; background-color: #000;" );
+         console.log( "%c\nStuffBySpencer - LUDUM DARE #35", "font-weight: bold; color: #fff; background-color: #000;" );
          console.log( "%cPOWERED BY:\n", "font-style: italic; color: #eee; background-color: #555;" );
       
          var game = new Phaser.Game( 720, 405 );
              game.antialias = false;
          
-         game.state.add( 'BOOT', GameTemplate.BOOT );
-         game.state.add( 'LOAD', GameTemplate.LOAD );
-         game.state.add( 'GAME', GameTemplate.GAME );
+         game.state.add( 'BOOT', LudumDare35.BOOT );
+         game.state.add( 'LOAD', LudumDare35.LOAD );
+         game.state.add( 'GAME', LudumDare35.GAME );
          
          game.state.start( 'BOOT' );
       

@@ -1,6 +1,6 @@
-GameTemplate.GAME = function( game ){};
+LudumDare35.GAME = function( game ){};
 
-GameTemplate.GAME.prototype = {
+LudumDare35.GAME.prototype = {
 
    create: function(){
    

@@ -1,12 +1,12 @@
-var GameTemplate = {
+var LudumDare35 = {
    
    SCORE: 0
    
 };
 
-GameTemplate.BOOT = function ( game ){};
+LudumDare35.BOOT = function ( game ){};
 
-GameTemplate.BOOT.prototype = {
+LudumDare35.BOOT.prototype = {
 
    init: function () {
    

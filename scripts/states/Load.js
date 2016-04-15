@@ -1,6 +1,6 @@
-GameTemplate.LOAD = function( game ){};
+LudumDare35.LOAD = function( game ){};
 
-GameTemplate.LOAD.prototype = {
+LudumDare35.LOAD.prototype = {
    
    init: function(){
       

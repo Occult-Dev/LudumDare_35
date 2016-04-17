@@ -27,7 +27,7 @@
       
          body{
             
-            background: #555;
+            background: #333;
             
          }
          
@@ -42,14 +42,80 @@
             
          }
          
+         #landscape{
+             
+             width: 100%;
+             bottom: 3px;
+             margin: auto;
+             position: absolute;
+             text-align: center;
+             overflow-x: hidden;
+             
+         }
+         
       </style>
       
    </head>
    
    <body>
       
-      <script>
+      <div id="landscape" ></div>
       
+      <script>
+         
+         var display = document.getElementById( 'landscape' );
+         
+         function flat( length ){
+             
+             var output = '';
+             
+             for( var i = 0; i < length; i++ ){
+                 
+                 output += '_';
+                 
+             }
+             
+             return output;
+             
+         };
+         
+         function mountain( length ){
+             
+           var output = '/';
+           
+           for( var i = 0; i < length; i++ ){
+           
+               output += '```-```';
+               
+           }
+           
+           output += '\\';
+           
+           return output;
+             
+         };
+         
+         function mountToLandscape( landscape, color ){
+             
+             display.innerHTML += '<i style="color: ' + color + '" >' + landscape + '</i>';
+             
+         };
+         
+         for( var i = 0; i < 420; i++ ){
+             var landscape = Math.round( Math.random() * 1 ) ? flat( Math.floor(Math.random()*25)+5 ) : mountain( Math.floor(Math.random()*25)+5 );
+             var color = Math.floor( Math.random() * 6 );
+                  if( color == 0 ) color = '#49B47E';
+             else if( color == 1 ) color = '#94DD4D';
+             else if( color == 2 ) color = '#FFD944';
+             else if( color == 3 ) color = '#807BE4';
+             else if( color == 4 ) color = '#6EA7C1';
+             else if( color == 5 ) color = '#E67FA2';
+             mountToLandscape( landscape, color );
+             
+         }
+         
+         
+         /*
          console.log( "%c\nStuffBySpencer - LUDUM DARE #35", "font-weight: bold; color: #fff; background-color: #000;" );
          console.log( "%cPOWERED BY:\n", "font-style: italic; color: #eee; background-color: #555;" );
       
@@ -61,7 +127,7 @@
          game.state.add( 'GAME', LudumDare35.GAME );
          
          game.state.start( 'BOOT' );
-      
+         */
       </script>
       
    </body>
